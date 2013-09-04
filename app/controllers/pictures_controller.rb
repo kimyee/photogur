@@ -23,7 +23,7 @@ class PicturesController < ApplicationController
   	
 		@pictures = [ 
 			{
-				:title  => "The old church on teh coast of White sea",
+				:title  => "The old church on the coast of White sea",
 				:artist => "Sergey Ershov",
 				:url    => "http://monicao.s3.amazonaws.com/bitmaker/house.jpg"
 			},
@@ -39,6 +39,14 @@ class PicturesController < ApplicationController
 			}
 		]
 		@picture = @pictures[params[:id].to_i]
+	end
+
+	def new
+		
+	end
+
+	def create
+		render :text => "Saving a picture. URL: #{params[:url]}, Title: #{params[:title]}, Artist: #{params[:artist]}"
 	end
 
 end
