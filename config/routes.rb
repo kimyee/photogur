@@ -1,4 +1,6 @@
 Photogur::Application.routes.draw do
+
+  resources :pictures, :only => [:index,:show]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
